@@ -1,3 +1,8 @@
+body {
+  background-image: radial-gradient(#cecccc 2px, #fff 2px);
+  background-size: 40px 40px;
+}
+
 .App {
   text-align: center;
 }
