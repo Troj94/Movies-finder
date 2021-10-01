@@ -1,12 +1,13 @@
-.moviesList {
+.list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 
   padding: 0;
+  list-style: none;
 }
 
 @media screen and (max-width: 768px) {
-  .moviesList {
+  .list {
     grid-template-columns: repeat(3, 1fr);
   }
 }

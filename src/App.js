@@ -1,33 +1,34 @@
-import './App.css';
-import { useState } from 'react';
+import { lazy, Suspense } from 'react';
+import { Switch, Route } from 'react-router-dom';
 
-import { Header } from 'components/Header/Header';
-import { MoviesList } from 'components/MoviesList/MoviesList';
-import { SearchBar } from 'components/SearchBar/SearchBar';
+import { AppBar } from 'components/AppBar/AppBar';
+import { Spinner } from 'components/Loader/Loader';
+
+import './App.css';
+
+const HomePage = lazy(() => import('components/views/HomePage'));
+const SearchMoviesPage = lazy(() =>
+  import('components/views/SearchMoviesPage'),
+);
+const DetailsPage = lazy(() => import('components/views/DetailsPage'));
 
 function App() {
-  const [searchOpen, setSearchOpen] = useState(false);
-
-  const goHome = () => {
-    setSearchOpen(false);
-  };
-
-  const openSearch = () => {
-    setSearchOpen(true);
-  };
-
   return (
     <div className="App">
-      <Header openSearch={openSearch} goHome={goHome} />
-      <hr></hr>
-      {!searchOpen ? (
-        <div>
-          Trending today
-          <MoviesList />
-        </div>
-      ) : (
-        <SearchBar />
-      )}
+      <AppBar />
+      <Suspense fallback={<Spinner />}>
+        <Switch>
+          <Route path="/" exact>
+            <HomePage />
+          </Route>
+          <Route path="/movies" exact>
+            <SearchMoviesPage />
+          </Route>
+          <Route path="/movies/:movieId">
+            <DetailsPage />
+          </Route>
+        </Switch>
+      </Suspense>
     </div>
   );
 }

@@ -1,0 +1,40 @@
+.list {
+  display: flex;
+  justify-content: center;
+
+  background-color: #3f51b5;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.item {
+  margin: 10px;
+
+  background-color: #3f51b5;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.activeItem {
+  font-weight: 700;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+
+  background-color: #fff;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.button:hover,
+.button:focus {
+  cursor: pointer;
+  background-color: #ccd4ff;
+}

@@ -1,0 +1,21 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+
+  list-style: none;
+}
+
+.spinner {
+  display: block;
+  width: 100%;
+}
+
+.item {
+  margin: 10px auto 15px;
+  padding: 5px;
+}
+
+.image {
+  border-radius: 5px;
+}

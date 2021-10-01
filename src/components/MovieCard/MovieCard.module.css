@@ -1,37 +1,37 @@
 .cardItem {
-  list-style: none;
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  margin: 15px;
+  display: flex;
 }
 
-.cardItem:hover,
-.cardItemInfo:hover {
+.cardItem:hover {
   cursor: pointer;
   box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
-
-  border-radius: 10px;
-}
-
-.cardImage {
-  width: 90%;
   border-radius: 10px;
 }
 
 .cardItemName {
   display: flex;
-  text-align: center;
-
-  max-width: 70%;
-  margin: auto;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
 }
 
 .cardItemName::before {
-  display: flex;
-
   position: relative;
   top: 2px;
   margin-right: 4px;
   content: url('images/film-icon-20-px.png');
+}
+
+.cardImage {
+  width: 95%;
+  border-radius: 10px;
+  margin: auto;
+}
+
+/* style for HomePage */
+.link {
+  display: flex;
+  flex-direction: column;
+  margin: 0 15px 25px;
 }
