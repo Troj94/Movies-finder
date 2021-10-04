@@ -6,7 +6,7 @@ import { fetchMovies } from 'services/fetchMovies';
 import { MovieCard } from 'components/MovieCard/MovieCard';
 import { Spinner } from 'components/Loader/Loader';
 
-import css from 'components/views/HomePage.module.css';
+import css from 'components/views/HomePage/HomePage.module.css';
 import link from 'components/MovieCard/MovieCard.module.css';
 
 export default function HomePage() {

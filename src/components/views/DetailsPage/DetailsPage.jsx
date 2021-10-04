@@ -14,10 +14,10 @@ import { fetchMovieById } from 'services/fetchMovies';
 import { Spinner } from 'components/Loader/Loader';
 import emptyImage from 'images/no-image.png';
 
-import css from 'components/views/DetailsPage.module.css';
+import css from 'components/views/DetailsPage/DetailsPage.module.css';
 
-const Cast = lazy(() => import('./Cast'));
-const Reviews = lazy(() => import('./Reviews'));
+const Cast = lazy(() => import('../Cast/Cast'));
+const Reviews = lazy(() => import('../Reviews/Reviews'));
 
 export default function DetailsPage() {
   const [movie, setMovie] = useState(null);

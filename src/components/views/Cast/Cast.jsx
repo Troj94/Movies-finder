@@ -5,7 +5,7 @@ import { fetchActorsById } from 'services/fetchMovies';
 import { Spinner } from 'components/Loader/Loader';
 import emptyImage from 'images/no-image.png';
 
-import css from 'components/views/Cast.module.css';
+import css from 'components/views/Cast/Cast.module.css';
 
 export default function Cast({ movieId }) {
   const [actors, setActors] = useState([]);

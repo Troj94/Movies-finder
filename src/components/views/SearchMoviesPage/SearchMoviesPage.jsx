@@ -7,7 +7,7 @@ import { fetchMoviesByQuery } from 'services/fetchMovies';
 import { MovieCard } from 'components/MovieCard/MovieCard';
 import { Spinner } from 'components/Loader/Loader';
 
-import css from 'components/views/SearchMoviesPage.module.css';
+import css from 'components/views/SearchMoviesPage/SearchMoviesPage.module.css';
 import link from 'components/MovieCard/MovieCard.module.css';
 
 export default function SearchMoviesPage() {
